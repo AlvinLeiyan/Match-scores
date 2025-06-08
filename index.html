@@ -1,48 +1,117 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Area FC 4-4-2 Formation Update</title>
+  <title>Area FC 5‑2 Al Seva — Match Report</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      padding: 20px;
-      color: #333;
-    }
-    h1 {
-      text-align: center;
-    }
-    .pitch {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      grid-template-rows: repeat(6, 60px);
-      max-width: 500px;
-      margin: 30px auto;
-      background: #60a46d;
-      border: 2px solid #3d7f4b;
-      color: white;
-      font-weight: bold;
-      text-align: center;
-      align-items: center;
-      justify-items: center;
-    }
-    .player {
-      background-color: rgba(255,255,255,0.2);
-      padding: 6px 8px;
-      border-radius: 5px;
-    }
+    body { padding: 20px; }
+    .score-bar { text-align:center; font-size:2rem; margin:20px 0; }
+    .tabs { display:flex; border-bottom:1px solid #ddd; }
+    .tab { padding:10px 20px; cursor:pointer; }
+    .tab.active { border-bottom:3px solid #2b4f81; color:#2b4f81; }
+    .panel { display:none; margin-top:20px; }
+    .panel.active { display:block; }
+    .pitch { display:grid; grid-template-columns:repeat(5,1fr); grid-gap:10px; background:#7bb26b; padding:10px; border-radius:6px; }
+    .player { background:rgba(255,255,255,0.2); padding:6px; border-radius:4px; color:#fff; font-weight:bold; }
+    .ratings table { width:100%; }
+    .ratings td { text-align:center; }
   </style>
 </head>
 <body>
-  <h1>Area FC - 4-4-2 Formation</h1>
-  <div class="pitch">
-    <div></div><div></div><div class="player">Khobby</div><div></div><div></div>
-    <div class="player">ABJ</div><div></div><div></div><div></div><div class="player">Jojo</div>
-    <div></div><div class="player">Andike</div><div></div><div class="player">Ato</div><div></div>
-    <div class="player">Andy ⚽⚽ A</div><div class="player">Mainoo</div><div></div><div class="player">Ekb</div><div class="player">M.Keita</div>
-    <div></div><div></div><div class="player">Garrincha ⚽</div><div class="player">Leiyan </div><div></div>
+
+  <h1>Match Report: Area FC 5‑2 Al Seva</h1>
+  <div style="text-align:center;">June 08, 2025</div>
+  <div class="score-bar">
+    ⚽ Area FC 5 – 2 Al Seva ⚽
+    <div style="font-size:1rem; color: #555;">Man of the Match: <strong>Andy</strong></div>
   </div>
+
+  <div class="tabs">
+    <div class="tab active" data-tab="lineups">Lineups</div>
+    <div class="tab" data-tab="ratings">Ratings</div>
+    <div class="tab" data-tab="scorers">Scorers</div>
+    <div class="tab" data-tab="subs">Substitutions</div>
+  </div>
+
+  <div id="lineups" class="panel active">
+    <h3>📋 Area FC (4‑4‑2)</h3>
+    <div class="pitch">
+      <div></div><div></div><div class="player">Khobby (GK)</div><div></div><div></div>
+      <div class="player">ABJ (LB)</div><div></div><div></div><div></div><div class="player">Jojo (RB)</div>
+      <div></div><div class="player">Andike (CB)</div><div></div><div class="player">Ato (CB)</div><div></div>
+      <div class="player">Andy ⚽⚽🅰 (LM)</div><div class="player">Mainoo (CM)</div><div></div><div class="player">Ekb (CM)</div><div class="player">M.Keita ⚽ (RM)</div>
+      <div></div><div></div><div class="player">Garrincha ⚽ (ST)</div><div class="player">Leiyan (ST)</div><div></div>
+    </div>
+
+    <h3>📋 Al Seva (4‑3‑3)</h3>
+    <div class="pitch" style="margin-top:20px;">
+      <div></div><div></div><div class="player">Zane (GK)</div><div></div><div></div>
+      <div class="player">Milo (LB)</div><div></div><div></div><div></div><div class="player">Klaus (RB)</div>
+      <div></div><div class="player">Tariq ⚽ (CB)</div><div></div><div class="player">Dino ⚽ (CB)</div><div></div>
+      <div></div><div class="player">Reece (CM)</div><div class="player">Leo (CM)</div><div class="player">Nico (CAM)</div><div></div>
+      <div class="player">Yemi (LW)</div><div></div><div class="player">Prince (ST)</div><div></div><div class="player">Javi (RW)</div>
+    </div>
+  </div>
+
+  <div id="ratings" class="panel ratings">
+    <h3>📊 Match Ratings</h3>
+    <h4>Area FC</h4>
+    <table>
+      <tr><th>Player</th><th>Rating</th></tr>
+      <tr><td>Andy ⚽⚽🅰</td><td>9.5</td></tr>
+      <tr><td>Garrincha ⚽</td><td>7.5</td></tr>
+      <tr><td>M.Keita ⚽</td><td>7.8</td></tr>
+      <tr><td>Wizzy ⚽</td><td>7.6</td></tr>
+      <tr><td>Leiyan</td><td>6.9</td></tr>
+    </table>
+    <h4>Al Seva</h4>
+    <table>
+      <tr><th>Player</th><th>Rating</th></tr>
+      <tr><td>Prince</td><td>6.0</td></tr>
+      <tr><td>Tariq ⚽</td><td>7.7</td></tr>
+      <tr><td>Dino ⚽</td><td>8.1</td></tr>
+    </table>
+  </div>
+
+  <div id="scorers" class="panel">
+    <h3>⚽ Goal Scorers</h3>
+    <ul>
+      <li>Andy – 15', 71' (2 goals) + Assist</li>
+      <li>Garrincha – 28'</li>
+      <li>Mo Keita – 54'</li>
+      <li>Wizzy – 83'</li>
+      <li>Tariq – 22'</li>
+      <li>Dino – 64'</li>
+    </ul>
+  </div>
+
+  <div id="subs" class="panel">
+    <h3>🔁 Substitutions</h3>
+    <h4>Area FC</h4>
+    <ul>
+      <li>America came on at 58'</li>
+      <li>Jude-K came on at 65'</li>
+      <li>Stone came on at 78'</li>
+    </ul>
+    <h4>Al Seva</h4>
+    <ul>
+      <li>Maks came on at 60'</li>
+      <li>Romeo came on at 67'</li>
+      <li>Omar came on at 80'</li>
+    </ul>
+  </div>
+
+  <script>
+    document.querySelectorAll('.tab').forEach(t => {
+      t.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
+        document.querySelectorAll('.panel').forEach(x => x.classList.remove('active'));
+        t.classList.add('active');
+        document.getElementById(t.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+
 </body>
 </html>
